@@ -46,6 +46,8 @@ final internal class PresentationManager: NSObject, UIViewControllerTransitionin
 
         var transition: TransitionAnimator
         switch transitionStyle {
+        case .iOS:
+            transition = IOSTransition(direction: .in)
         case .bounceUp:
             transition = BounceUpTransition(direction: .in)
         case .bounceDown:
@@ -67,6 +69,8 @@ final internal class PresentationManager: NSObject, UIViewControllerTransitionin
 
         var transition: TransitionAnimator
         switch transitionStyle {
+        case .iOS:
+            transition = IOSTransition(direction: .out)
         case .bounceUp:
             transition = BounceUpTransition(direction: .out)
         case .bounceDown:
